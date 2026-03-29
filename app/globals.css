@@ -121,36 +121,37 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground font-sans;
-  }
-  .font-heading {
-    font-family: var(--font-heading);
-  }
+  @layer base {
+    * {
+      @apply border-border outline-ring/50;
+    }
+    body {
+      @apply bg-background text-foreground font-sans;
+    }
+    .font-heading {
+      font-family: var(--font-heading);
+    }
 
-  /* Added gradient backgrounds and animations */
-  .gradient-bg {
-    background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #fb923c 100%);
-  }
+    /* Added gradient backgrounds and animations */
+    .gradient-bg {
+      background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #fb923c 100%);
+    }
 
-  .gradient-text {
-    background: linear-gradient(135deg, #ea580c, #f97316);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+    .gradient-text {
+      background: linear-gradient(135deg, #ea580c, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-  .skill-tag {
-    transition: all 0.3s ease;
-  }
+    .skill-tag {
+      transition: all 0.3s ease;
+    }
 
-  .skill-tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(234, 88, 12, 0.3);
+    .skill-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(234, 88, 12, 0.3);
+    }
   }
 
   /* Walgatharu star animations */
@@ -245,4 +246,4 @@
       opacity: 0.1;
     }
   }
-}
+
