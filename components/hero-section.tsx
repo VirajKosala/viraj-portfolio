@@ -2,10 +2,12 @@
 
 import { Button } from "@/components/ui/button"
 import { Download, Mail } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export function HeroSection() {
   const [isDark, setIsDark] = useState(false)
+  const [showVideo, setShowVideo] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const checkTheme = () => {
@@ -24,6 +26,22 @@ export function HeroSection() {
       observer.disconnect()
     }
   }, [])
+
+  useEffect(() => {
+    // Play video once when component mounts
+    if (showVideo && videoRef.current) {
+      videoRef.current.playbackRate = 1
+      videoRef.current.play().catch(error => {
+        console.log('Video play failed:', error)
+      })
+    }
+  }, [showVideo])
+
+  const handleVideoEnd = () => {
+    // Remove video when it naturally ends
+    setShowVideo(false)
+  }
+
   const scrollToContact = () => {
     const element = document.getElementById("contact")
     if (element) {
@@ -52,9 +70,42 @@ export function HeroSection() {
         position: 'relative'
       }}
     >
+      {/* Video Background - Plays Once and Removes When Ends */}
+      {showVideo && (
+        <div className="absolute inset-0 overflow-hidden">
+          <video
+            ref={videoRef}
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            loop={false}
+            muted
+            playsInline
+            onEnded={handleVideoEnd}
+            style={{
+              opacity: 0.5,
+              zIndex: 1
+            }}
+          >
+            <source src="/video/Fish_Swimming_Video_Creation.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      )}
+
+      {/* Gradient Overlay */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: isDark
+            ? 'linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 27, 75, 0.8) 50%, rgba(15, 23, 42, 0.8) 100%)'
+            : 'linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(96, 165, 250, 0.6) 50%, rgba(147, 197, 253, 0.6) 100%)',
+          zIndex: 2
+        }}
+      />
+
       {/* Starry background for dark mode */}
       {isDark && (
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 3 }}>
           {/* Flowing walgatharu stars */}
           {[...Array(80)].map((_, i) => (
             <div
@@ -121,7 +172,7 @@ export function HeroSection() {
           ))}
         </div>
       )}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="flex flex-col items-center justify-center text-center space-y-8 mt-12">
           {/* Text Content */}
           <div className="max-w-4xl">
