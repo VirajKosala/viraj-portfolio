@@ -62,6 +62,18 @@ export function CertificationsSection() {
       image: "/sertificates/Python_Programming_E-Certificate.pdf"
     },
     {
+      title: "Deploying and Evaluating GenAI Apps Learning Badge Path",
+      issuer: "MongoDB",
+      category: "Programming",
+      image: "/sertificates/mongodb_s1.png"
+    },
+    {
+      title: "Vector Search Fundamentals",
+      issuer: "MongoDB",
+      category: "Programming",
+      image: "/sertificates/mongodb_s2.png"
+    },
+    {
       title: "OOPs in Java Programming",
       issuer: "Simple Learn",
       category: "Programming",
@@ -109,10 +121,28 @@ export function CertificationsSection() {
                   .map((cert, index) => (
                     <Card 
                       key={index}
-                      className="bg-white backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                      className={`backdrop-blur-sm transition-all duration-300 cursor-pointer hover:scale-105 ${
+                        cert.issuer === "University of Moratuwa" 
+                          ? "border-2 shadow-xl hover:shadow-2xl" 
+                          : "border shadow-lg hover:shadow-xl"
+                      } ${
+                        category === "Language"
+                          ? isDarkMode ? "bg-blue-950 border-blue-600" : "bg-blue-50 border-blue-300"
+                          : isDarkMode ? "bg-black border-gray-700" : "bg-white border-gray-200/50"
+                      }`}
                       style={{
-                        backgroundColor: isDarkMode ? '#000000' : '#ffffff',
-                        borderColor: isDarkMode ? '#374151' : '#e5e7eb'
+                        backgroundColor: category === "Language" 
+                          ? (isDarkMode ? '#1e3a5f' : '#eff6ff')
+                          : (isDarkMode ? '#000000' : '#ffffff'),
+                        borderColor: cert.issuer === "University of Moratuwa"
+                          ? (isDarkMode ? '#3b82f6' : '#2563eb')
+                          : (category === "Language" 
+                              ? (isDarkMode ? '#1e40af' : '#60a5fa')
+                              : (isDarkMode ? '#374151' : '#e5e7eb')
+                            ),
+                        boxShadow: cert.issuer === "University of Moratuwa"
+                          ? (isDarkMode ? '0 0 20px rgba(59, 130, 246, 0.5)' : '0 0 15px rgba(37, 99, 235, 0.3)')
+                          : undefined
                       }}
                       onClick={() => openCertificate(cert.image)}
                     >
@@ -123,7 +153,9 @@ export function CertificationsSection() {
                             <p className="text-sm text-muted-foreground">{cert.issuer}</p>
                           </div>
                           <div className="ml-2 flex-shrink-0">
-                            <FileText className="w-5 h-5 text-blue-600" />
+                            <FileText className={`w-5 h-5 ${
+                              category === "Language" ? "text-blue-500" : "text-blue-600"
+                            }`} />
                           </div>
                         </div>
                       </CardContent>

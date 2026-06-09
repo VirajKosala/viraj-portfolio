@@ -100,6 +100,16 @@ export default function ProjectsSection() {
     },
     {
       id: 5,
+      title: "Smart Campus Operations Hub",
+      category: "Full-Stack",
+      description: "Comprehensive campus management platform optimizing facility operations, equipment management, and resource allocation across campus infrastructure.",
+      technologies: ["Spring Boot", "React", "Java", "SQL Workbench"],
+      duration: "3rd Year 2nd Semester",
+      image: "/projects/smart-campus-operation-Hub/image.png",
+      githubUrl: "https://github.com/VirajKosala/smart-campus-Resource-Management-System-PAF2026",
+    },
+    {
+      id: 6,
       title: "Online Advertising Agency Management System",
       category: "Web Development",
       description: "A comprehensive platform for managing advertising campaigns, client relationships, and performance analytics.",
@@ -109,7 +119,7 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/VirajKosala/online-advertising-management-agency-",
     },
     {
-      id: 6,
+      id: 8,
       title: "Financial Tracking App with Room Database",
       category: "Mobile Development",
       description: "Feature-rich financial management application with local data persistence using Room Database, supporting expense tracking, budget management, and financial insights.",
@@ -119,7 +129,7 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/VirajKosala/Financial-Tracker-with_Room_Database",
     },
     {
-      id: 7,
+      id: 9,
       title: "HealthCare Application - Room Database",
       category: "Mobile Development",
       description: "Comprehensive healthcare management application using Room Database for patient records, appointments, and medical history tracking with secure data storage.",
@@ -129,7 +139,7 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/VirajKosala/HealthCareApplication-Room-Database",
     },
     {
-      id: 8,
+      id: 10,
       title: "HealthCare Application - Shared Preferences",
       category: "Mobile Development",
       description: "Lightweight healthcare tracking application using Shared Preferences for simple data storage, ideal for quick patient information access and basic medical record management.",
@@ -139,7 +149,7 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/VirajKosala/HealthCareApplication-Shared-Preferences",
     },
     {
-      id: 9,
+      id: 11,
       title: "Financial Tracking App with shared preference",
       category: "Mobile Development",
       description: "Streamlined financial management application allowing users to track income and expenses with intuitive UI and real-time budgeting capabilities.",
@@ -149,7 +159,7 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/VirajKosala/Financial-Tracker-Application_with_shared_preference-",
     },
     {
-      id: 10,
+      id: 12,
       title: "Book Store Application",
       category: "Mobile Development",
       description: "Frontend-only book browsing application featuring user-friendly interface for exploring book categories and viewing detailed book information.",

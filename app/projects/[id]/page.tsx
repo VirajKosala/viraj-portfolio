@@ -118,11 +118,47 @@ const projects = [
       { type: "image", src: "/images/skill-nest-assement.png", alt: "Skill Assessment Page" },
       { type: "image", src: "/images/skill-nest-diaryManagement.png", alt: "Diary Management Interface" },
       { type: "image", src: "/images/skill-nest-dailyDiaryEntry.png", alt: "Daily Diary Entry" },
-      { type: "image", src: "/images/skill-nest-supDashbaord.png", alt: "Supervisor Dashboard" }
+      { type: "image", src: "/images/skill-nest-supDashbaord.png", alt: "Supervisor Dashboard" },
+      { type: "video", src: "/video/Internship management system.mp4", alt: "Internship Management System Demo" }
     ]
   },
   {
     id: 5,
+    title: "Smart Campus Operations Hub",
+    category: "Full-Stack",
+    description: "Comprehensive campus management platform optimizing facility operations, equipment management, and resource allocation across campus infrastructure.",
+    fullDescription: "Smart Campus Operations Hub is a full-stack application developed by a 4-member team to streamline campus operations and facility management. The platform provides an integrated solution for managing campus equipment, maintenance schedules, resource allocation, and operational efficiency. The user's responsibility includes complete equipment management functionality - adding equipment to inventory, removing decommissioned items, scheduling temporary maintenance stops, tracking maintenance history, and monitoring equipment status in real-time. Built with Spring Boot backend for robust API services, React frontend for intuitive user interface, Java for business logic, and SQL Workbench for data management. The system enables administrators to maintain comprehensive equipment records, schedule preventive maintenance, and ensure optimal campus facility performance.",
+    technologies: ["Spring Boot", "React", "Java", "SQL Workbench", "REST API"],
+    duration: "3rd Year 2nd Semester",
+    image: "/projects/smart-campus-operation-Hub/image.png",
+    githubUrl: "https://github.com/VirajKosala/smart-campus-Resource-Management-System-PAF2026",
+    liveUrl: null,
+    features: [
+      "Equipment inventory management",
+      "Add, remove, and update equipment records",
+      "Temporary maintenance scheduling",
+      "Equipment status tracking",
+      "Maintenance history logging",
+      "Real-time equipment availability",
+      "Maintenance notifications and alerts",
+      "Equipment categorization and filtering",
+      "Resource allocation optimization",
+      "Campus facility monitoring dashboard"
+    ],
+    gallery: [
+      { type: "image", src: "/projects/smart-campus-operation-Hub/image.png", alt: "Smart Campus Operations Hub Overview" },
+      { type: "image", src: "/projects/smart-campus-operation-Hub/user-create-resource.png", alt: "User Create Resource" },
+      { type: "image", src: "/projects/smart-campus-operation-Hub/admin-booking-req.png", alt: "Admin Booking Requests" },
+      { type: "image", src: "/projects/smart-campus-operation-Hub/admin-home.png", alt: "Admin Home Dashboard" },
+      { type: "image", src: "/projects/smart-campus-operation-Hub/admin-notification.png", alt: "Admin Notifications" },
+      { type: "image", src: "/projects/smart-campus-operation-Hub/admin-resource.png", alt: "Admin Resource Management" },
+      { type: "image", src: "/projects/smart-campus-operation-Hub/admin-ticket-assign.png", alt: "Admin Ticket Assignment" },
+      { type: "image", src: "/projects/smart-campus-operation-Hub/admin-ticket.png", alt: "Admin Ticket Details" },
+      { type: "video", src: "/video/campus-equipment Management system-paf.mp4", alt: "Campus Equipment Management System Demo" }
+    ]
+  },
+  {
+    id: 6,
     title: "Online Advertising Agency Management System",
     category: "Web Development",
     description: "A comprehensive platform for managing advertising campaigns, client relationships, and performance analytics.",
@@ -146,7 +182,7 @@ const projects = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Financial Tracking App with Room Database",
     category: "Mobile Development",
     description: "Feature-rich financial management application with local data persistence using Room Database, supporting expense tracking, budget management, and financial insights.",
@@ -173,7 +209,7 @@ const projects = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: "HealthCare Application - Room Database",
     category: "Mobile Development",
     description: "Comprehensive healthcare management application using Room Database for patient records, appointments, and medical history tracking with secure data storage.",
@@ -201,7 +237,7 @@ const projects = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     title: "HealthCare Application - Shared Preferences",
     category: "Mobile Development",
     description: "Lightweight healthcare tracking application using Shared Preferences for simple data storage, ideal for quick patient information access and basic medical record management.",
@@ -228,7 +264,7 @@ const projects = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     title: "Financial Tracking App with shared preference",
     category: "Mobile Development",
     description: "Streamlined financial management application allowing users to track income and expenses with intuitive UI and real-time budgeting capabilities.",
@@ -256,7 +292,7 @@ const projects = [
     ]
   },
   {
-    id: 10,
+    id: 11,
     title: "Book Store Application",
     category: "Mobile Development",
     description: "Frontend-only book browsing application featuring user-friendly interface for exploring book categories and viewing detailed book information.",
