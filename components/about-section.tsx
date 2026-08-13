@@ -66,7 +66,7 @@ export function AboutSection() {
                   <h3 className="font-heading font-bold text-2xl mb-6 text-white">Profile</h3>
                   <p className="text-white/98 leading-relaxed text-pretty text-base font-medium">
                     Motivated and detail-oriented undergraduate student currently pursuing a degree in Information Technology at <span className="text-yellow-500 font-bold">SLIIT</span>. 
-                    In <span className="font-bold text-yellow-300">third year, second semester</span>, specializing in Information Technology. I am eager to apply my knowledge in technology, 
+                    In <span className="font-bold text-yellow-300">4th year, 1st semester</span>, specializing in Information Technology. I am eager to apply my knowledge in technology, 
                     data management, and software development to real-world challenges.
                   </p>
                 </div>
@@ -187,7 +187,7 @@ export function AboutSection() {
                           </div>
                           <div>
                             <h4 className="font-semibold text-blue-700 mb-2">Current Status</h4>
-                            <p className="text-sm text-gray-600">3rd Year, 2nd Semester</p>
+                            <p className="text-sm text-gray-600">4th Year, 1st Semester</p>
                           </div>
                           <div className="flex items-center gap-2 pt-2">
                             <a 
